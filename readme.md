@@ -1,7 +1,7 @@
 # Bajaj Finserv Full Stack Developer Task
 - RA2111003011135
 - KAMSALA PALLAVALI VISHNU SAI
-This is a full stack application built with Node.js, Express.js, MongoDB for the backend, and React.js for the frontend. The application processes input data to filter numbers and find the highest alphabet character, displaying the results based on user selection.
+- This is a full stack application built with Node.js, Express.js, MongoDB for the backend, and React.js for the frontend. The application processes input data to filter numbers and find the highest alphabet character, displaying the results based on user selection.
 
 ## Project Structure
 ```sh

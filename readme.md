@@ -3,7 +3,7 @@
 This is a full stack application built with Node.js, Express.js, MongoDB for the backend, and React.js for the frontend. The application processes input data to filter numbers and find the highest alphabet character, displaying the results based on user selection.
 
 ## Project Structure
-
+```sh
 your-project-root/
 ├── backend/
 │ ├── index.js
@@ -25,6 +25,7 @@ your-project-root/
 ├── package.json
 └── ... (other root files)
 
+```
 
 ## Prerequisites
 
@@ -68,5 +69,7 @@ Make sure you have the following installed on your machine:
        npm start
     ```
     -   it runs both frontend and backend
+    - used concurrency to run frontend and backend simultaneously
+    
 
 

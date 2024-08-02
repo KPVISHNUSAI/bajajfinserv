@@ -89,6 +89,7 @@ Make sure you have the following installed on your machine:
     <img style="margin-bottom:20px;" src="https://github.com/KPVISHNUSAI/bajajfinserv/blob/main/Result/Screenshot%202024-08-02%20195538.png?raw=true" />
     <img style="margin-bottom:20px;" src="https://github.com/KPVISHNUSAI/bajajfinserv/blob/main/Result/Screenshot%202024-08-02%20195650.png?raw=true" />
     <img style="margin-bottom:20px;" src="https://github.com/KPVISHNUSAI/bajajfinserv/blob/main/Result/Screenshot%202024-08-03%20002451.png?raw=true" />
+    <img style="margin-bottom:20px;" src="https://github.com/KPVISHNUSAI/bajajfinserv/blob/main/Result/Screenshot%202024-08-03%20004034.png?raw=true" />
 </div>
 
 

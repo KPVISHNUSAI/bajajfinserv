@@ -1,0 +1,26 @@
+### Test POST /bfhl with mixed data
+POST http://localhost:5000/bfhl
+Content-Type: application/json
+
+{
+    "data": ["M", "1", "334", "4", "B"]
+}
+
+### Test POST /bfhl with numeric data only
+POST http://localhost:5000/bfhl
+Content-Type: application/json
+
+{
+    "data": ["2", "4", "5", "92"]
+}
+
+### Test POST /bfhl with alphabetic data only
+POST http://localhost:5000/bfhl
+Content-Type: application/json
+
+{
+    "data": ["A", "C", "z"]
+}
+
+### Test GET /bfhl
+GET http://localhost:5000/bfhl

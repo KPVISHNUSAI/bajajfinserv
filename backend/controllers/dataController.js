@@ -12,9 +12,9 @@ exports.handlePostRequest = (req, res) => {
 
     const response = {
         is_success: true,
-        user_id: 'your_fullname_ddmmyyyy', // replace with actual data
-        email: 'your_email@domain.com',   // replace with actual data
-        roll_number: 'your_roll_number',  // replace with actual data
+        user_id: 'KAMSALAPALLAVALIVISHNUSAI_11112003',
+        email: 'kk4563@srmist.edu.in',
+        roll_number: '2111003011135',
         numbers: numbers,
         alphabets: alphabets,
         highest_alphabet: highestAlphabet

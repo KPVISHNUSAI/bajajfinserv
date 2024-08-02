@@ -73,5 +73,15 @@ Make sure you have the following installed on your machine:
 
 
 ## Results
-![Alt text]()
+```sh
+    POST http://localhost:5000/bfhl
+    Content-Type: application/json
+
+    {
+        "data": ["A", "C", "z"]
+    }
+
+```
+
+![Alt] (https://github.com/KPVISHNUSAI/bajajfinserv/blob/main/Result/Screenshot%202024-08-02%20195447.png)
 

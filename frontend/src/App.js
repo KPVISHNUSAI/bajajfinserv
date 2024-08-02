@@ -1,63 +1,40 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import TextInput from './TextInput';
-import Dropdown from './Dropdown';
+// src/App.js
+import React, { useState } from 'react';
+import TextInput from './components/TextInput';
+import Dropdown from './components/Dropdown';
+import './App.css';
 
-class App extends Component {
-    state = {
-        data: '',
-        response: null,
-        selectedOptions: []
-    };
+const App = () => {
+  const [response, setResponse] = useState({});
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const options = ['Alphabets', 'Numbers', 'Highest alphabet'];
 
-    handleInputChange = (e) => {
-        this.setState({ data: e.target.value });
-    };
+  const handleResponse = (data) => {
+    setResponse(data);
+  };
 
-    handleSubmit = async () => {
-        try {
-            const res = await axios.post('your_backend_url/bfhl', JSON.parse(this.state.data));
-            this.setState({ response: res.data });
-        } catch (err) {
-            console.error(err);
-        }
-    };
+  const renderResponse = () => {
+    if (selectedOptions.length === 0) return null;
 
-    handleOptionChange = (selectedOptions) => {
-        this.setState({ selectedOptions });
-    };
+    const result = selectedOptions.map((option) => {
+      if (option === 'Alphabets') return `Alphabets: ${response.alphabets?.join(', ')}`;
+      if (option === 'Numbers') return `Numbers: ${response.numbers?.join(', ')}`;
+      if (option === 'Highest alphabet') return `Highest Alphabet: ${response.highest_alphabet}`;
+      return null;
+    });
 
-    renderResponse = () => {
-        const { response, selectedOptions } = this.state;
-        if (!response) return null;
+    return result.map((line, index) => <p key={index}>{line}</p>);
+  };
 
-        const dataToRender = selectedOptions.reduce((acc, option) => {
-            acc[option] = response[option];
-            return acc;
-        }, {});
-
-        return (
-            <div>
-                {Object.entries(dataToRender).map(([key, value]) => (
-                    <div key={key}>
-                        <h3>{key}</h3>
-                        <p>{JSON.stringify(value)}</p>
-                    </div>
-                ))}
-            </div>
-        );
-    };
-
-    render() {
-        return (
-            <div>
-                <h1>{'your_roll_number'}</h1>
-                <TextInput onChange={this.handleInputChange} onSubmit={this.handleSubmit} />
-                <Dropdown onChange={this.handleOptionChange} />
-                {this.renderResponse()}
-            </div>
-        );
-    }
-}
+  return (
+    <div className="App">
+      <TextInput onResponse={handleResponse} />
+      {response && (
+        <Dropdown options={options} selectedOptions={selectedOptions} setSelectedOptions={setSelectedOptions} />
+      )}
+      <div>{renderResponse()}</div>
+    </div>
+  );
+};
 
 export default App;
